@@ -52,9 +52,6 @@ table {
 }
 
 html {
-    max-width: 1920px;
-    min-width: 428px;
-    width: 100%;
     font-size: 62.5%;
 }
 
@@ -82,7 +79,13 @@ h3 {
 }
 
 p, a {
-    font-size: 3rem;
+    font-size: 2.5rem;
+}
+button, input, label {
+    font-size: 2rem;
+} 
+small {
+    font-size: 1rem;
 }
 
 /* header section */
@@ -109,7 +112,7 @@ header {
 /* spacers */
 .spacer {
     width: 100%;
-    height: 10vh;
+    height: 20vh;
     background-color: rgb(0, 4, 17);
 }
 .spacer-sm {
@@ -124,9 +127,15 @@ header {
     text-align: center;
     background-color: rgb(0, 4, 17);
 }
+.gallery-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
 
 .gallery img {
-    margin: 0 2rem 4rem 2rem;
+    margin: 1rem auto;
+    width: 30%;
 }
 
 /* about us section */
@@ -142,15 +151,11 @@ header {
 .about-container {
     height: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
     background-color: rgb(0, 4, 17, .8);
     padding: 2rem;
-}
-
-.about h2 {
-    width: 100%;
 }
 
 .about-container .text {
@@ -184,10 +189,6 @@ header {
 
 .contact p {
     padding: .5vh 0;
-    font-size: 2rem;
-}
-.contact a {
-    font-size: 2rem;
 }
 
 .info {
@@ -213,13 +214,12 @@ header {
 footer {
     width: 100%;
     padding: 2vh;
-    font-size: 3rem;
     background-color: rgb(0, 4, 17);
     display: flex;
-    flex-flow: wrap;
+    flex-flow: row wrap;
 }
 footer form {
-    flex-basis: 30%;
+    flex-basis: 25%;
     display: flex;
     flex-flow: wrap;
     justify-content: center;
@@ -228,55 +228,128 @@ footer form {
 footer form label{
     flex-basis: 100%;
     text-align: center;
-    font-size: 80%;
+    padding: 1rem;
 }
 footer form input {
-    flex-basis: 70%;
-    font-size: 80%;
+    flex-basis: 75%;
 }
 footer form button {
-    flex-basis: 30%;
-    font-size: 80%;
+    padding: 0.5rem;
+    flex-basis: 25%;
+    
 }
 footer nav {
-    flex-basis: 70%;
+    flex-basis: 75%;
     display: flex;
     justify-content: space-around;
-    font-size: 2rem;
 }
+
 footer nav a {
     padding-bottom: 3rem;
 }
+
 footer small {
     flex-basis: 100%;
-    font-size: 50%;
     text-align: right;
     margin-right: 10%;
 }
+@media screen and (max-width: 1440px) {
+    footer form input {
+        flex-basis: 100%;
+    }
+    footer form button {
+        flex-basis: 100%;
+    }
+}
 
 /* mobile media query */
-@media (max-width: 428px) {
+@media screen and (max-width: 800px) {
+    p, a {
+        font-size: 2rem;
+    }
+    h1 {
+        font-size: 4.5rem;
+    }
+    h2 {
+        font-size: 5.5rem;
+    }
     /* header section */
-    
-
+    header h1 span {
+        display: block;
+    }
+    header nav {
+        flex-flow: column wrap ;
+    }
     /* gallery section */
-    .gallery {
-        height: auto;
+    .gallery-container {
+        flex-direction: column;
+    }
+    .gallery img {
+        width: 70%;
+        margin: 1rem auto;
+    }
+    /* footer section */
+    footer {
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    footer nav {
+        flex-flow: column;
+        align-items: center;
+        padding: 2rem 0;
+    }
+    footer nav a {
+        padding-bottom: 1rem;
+    }
+    footer small {
+        margin: 0;
+        text-align: center;
+    }
+    
+}
+
+@media screen and (max-width: 428px) {
+    h2 {
+        font-size: 5rem;
+    }
+    /* header section */
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h3 {
+        font-size: 4rem;
+    }
+
+    header h1 span {
+        display: block;
+    }
+    
+    /* gallery section */
+    
+    .gallery img {
+        width: 100%;
+        margin: 1rem auto;
     }
     
     /* about us section */
-
+    
     .about {
         height: 200vh;
     }
     
     .about h2 {
         width: 100%;
-        padding-top: 5vh;
+        padding-top: 4vh;
+    }
+    .about-container {
+        padding: 0;
     }
     
     .about-container .text {
-        width: 85%;
+        width: 90%;
+        padding: 5vh 0;
     }
     
     /* contact us section */
@@ -301,11 +374,28 @@ footer small {
         width: 100%;
         padding-bottom: 2.5vh;
     }
-
+    
     /* footer section */
     footer {
         height: auto;
         padding-top: 2.5vh;
+    }
+    footer form{
+        flex-flow: column;
+    }
+    
+    
+    
+}
+
+@media screen and (max-width:350px) {
+    h2 {
+        font-size: 4rem;
+    }
+    h3 {
+        font-size: 3rem;
+    }
+    p {
         font-size: 2rem;
     }
 }
