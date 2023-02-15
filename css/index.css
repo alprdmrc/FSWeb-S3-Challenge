@@ -109,8 +109,12 @@ header {
     justify-content: space-around;
 }
 .header-container nav a {
-    padding: 1% 4%;
+    padding: 1rem 4%;
 }
+.header-container .icons a {
+    padding: 1rem 1%;
+}
+
 /* spacers */
 .spacer {
     width: 100%;
@@ -256,6 +260,9 @@ footer small {
     margin-right: 10%;
 }
 @media screen and (max-width: 1440px) {
+    .contact a {
+        font-size: 2rem;
+    }
     footer form input {
         flex-basis: 100%;
     }
@@ -295,6 +302,24 @@ footer small {
     .gallery img {
         width: 70%;
         margin: 1rem auto;
+    }
+    /* about section */
+    .info {
+        flex-wrap: wrap;
+    }
+    
+    .address {
+        width: 100%;
+        padding-bottom: 2.5vh;
+    }
+    
+    .hours {
+        width: 100%;
+    }
+    
+    .contacts {
+        width: 100%;
+        padding-bottom: 2.5vh;
     }
     /* footer section */
     footer {
@@ -365,36 +390,14 @@ footer small {
         padding-top: 2.5vh;
     }
     
-    .info {
-        flex-wrap: wrap;
-    }
-    
-    .address {
-        width: 100%;
-        padding-bottom: 2.5vh;
-    }
-    
-    .hours {
-        width: 100%;
-    }
-    
-    .contacts {
-        width: 100%;
-        padding-bottom: 2.5vh;
-    }
     
     /* footer section */
     footer {
-        height: auto;
         padding-top: 2.5vh;
-    }
-    footer form{
-        flex-flow: column;
-    }
-    
-    
-    
+    }    
 }
+
+
 
 @media screen and (max-width:350px) {
     h2 {

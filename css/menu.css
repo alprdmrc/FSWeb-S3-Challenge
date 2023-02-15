@@ -58,10 +58,9 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
-    
 }
 
-h1, h2, h3, h4, h5, h6, p, a, i ,label, small, article{
+h1, h2, h3, h4, h5, h6, p, a, i ,label, small{
     text-decoration: none;
     color: rgb(225, 239, 230);
 }
@@ -71,19 +70,19 @@ h1 {
 }
 
 h2 {
-    font-size: 5rem;
+    font-size: 6rem;
     padding: 1rem 0;
 }
 
 h3 {
-    font-size: 3.5rem;
+    font-size: 5rem;
 }
 h4 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
 }
 
 p, a {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 button, input, label {
     font-size: 2rem;
@@ -97,7 +96,7 @@ small {
 header {
     width: 100%;
     height: 100vh;
-    background-image: url('../img/menu-header.jpg');
+    background-image: url('../img/home-header.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -114,7 +113,10 @@ header {
     justify-content: space-around;
 }
 .header-container nav a {
-    padding: 1% 4%;
+    padding: 1rem 4%;
+}
+.header-container .icons a {
+    padding: 1rem 1%;
 }
 
 /* spacer */
